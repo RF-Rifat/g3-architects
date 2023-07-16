@@ -121,11 +121,11 @@ p {
 .feature-container {
   display: flex;
   margin: var(--section-padding);
-  gap: 1cqw;
+  gap: 3cqw;
   align-items: center;
 }
 .feature-card {
-  border-radius: .5cqw;
+  border-radius: 0.5cqw;
   background: #fff;
   box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06);
   padding: 1.5cqw;
@@ -137,31 +137,93 @@ p {
   border-left: #ff900e solid 5px;
   padding-left: 10px;
 }
-.feature-content{
+.feature-content {
   flex: 1;
 }
-.feature-content div{
+.feature-content div {
   margin-bottom: 1cqw;
 }
 .feature-content p,
 .feature-content div p {
   text-align: left;
 }
-.feature-img{
+.feature-img {
   flex: 1;
   position: relative;
 }
 .feature-img img {
   width: 100%;
 }
-.feature-batch{
+.feature-batch {
   position: absolute;
   background-color: #ff900e;
   border-radius: 8px;
   padding: 1.5cqw;
   color: #fff;
   font-size: 2cqw;
-  bottom: .8cqw;
+  bottom: -4cqw;
+  left: -4cqw;
+}
+
+/*fact section */
+
+.fact-content {
+  max-width: 65cqw;
+  padding: var(--section-padding);
+}
+.fact-content h2 {
+  font-size: var(--header-font);
+  margin-bottom: 1cqw;
+}
+.fact-content p {
+  text-align: left;
+}
+.fact-card-container {
+  display: flex;
+  margin: var(--section-padding-2);
+  justify-content: space-between;
+  gap: 2cqw;
+}
+.fact-card {
+  max-height: 10cqw;
+  max-width: 10cqw;
+  display: grid;
+  place-items: center;
+  border: #ff900e 2px solid;
+  border-radius: 8px;
+  padding: 1cqw;
+  gap: 1cqw;
+}
+.fact-card{
+  width: 100%;
+}
+/* sponsors */
+
+.sponsor-heading {
+  text-align: center;
+  font-size: var(--header-font);
+  margin-bottom: 1cqw;
+}
+
+.sponsor-cards > .fact-card {
+  border: none;
+}
+.sponsor-cards-img{
+  width: 15cqw;
+}
+/* footer */
+
+footer {
+  border-radius: 8px;
+  background: #fff4e7;
+  margin: var(--section-padding);
+  display: grid;
+  place-items: center;
+  height: 100%;
+  padding: 3cqw;
+}
+footer p{
+  margin-bottom: 0;
 }
 /* Responsive Media quarries */
 
@@ -173,13 +235,19 @@ p {
     --section-padding: 3cqw 8cqw;
   }
   nav,
-  .team-container {
+  .team-container,
+  .feature-container,
+  .fact-card-container{
     flex-direction: column;
     align-items: center;
   }
   .team-imgs {
     grid-template-columns: 1fr;
   }
+}
+.fact-card{
+  max-width: 30cqw;
+  max-height: 30cqw;
 }
 /* medium devices */
 @media screen and (min-width: 576px) and (max-width: 960px) {
