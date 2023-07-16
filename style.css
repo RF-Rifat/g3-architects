@@ -9,7 +9,8 @@
   --para-font: 1cqw;
   --header-clr: #131313;
   --para-clr: #727272;
-  --section-padding: 5cqw 15cqw;
+  --section-padding: 3.2cqw 15cqw;
+  --section-padding-2: 3.2cqw 18cqw;
 }
 body {
   font-family: "Work Sans", sans-serif;
@@ -40,7 +41,7 @@ nav ul li > a {
   color: #424242;
   text-align: center;
   font-family: Work Sans;
-  font-size: 1.125rem;
+  font-size: 1.5cqw;
   font-weight: 500;
   line-height: 1.8cqw;
 }
@@ -50,10 +51,10 @@ nav ul li > a {
   max-width: 50cqw;
   text-align: center;
   margin: 0 auto;
-  line-height: 6cqw;
 }
 .banner-heading {
   font-size: 4cqw;
+  margin-bottom: 1cqw;
 }
 p {
   color: var(--para-clr);
@@ -61,7 +62,7 @@ p {
   font-family: Work Sans;
   font-size: var(--para-font);
   font-weight: 400;
-  line-height: 1.625rem;
+  margin-bottom: 1cqw;
 }
 .btn {
   border-radius: 0.5rem;
@@ -70,4 +71,93 @@ p {
   border: none;
   color: #fff;
   font-size: 1.2cqw;
+  cursor: pointer;
+  margin-bottom: 1cqw;
+}
+
+.banner-section img{
+    width: 100%;
+    padding: var(--section-padding);
+}
+
+
+
+/* teams view */
+.team-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--section-padding-2);
+  /* max-width: 70cqw; */
+  /* margin: 0 auto; */
+  gap: 5cqw;
+  text-align: center;
+}
+.team-imgs{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25cqw;
+  flex: 1;
+}
+.team-content{
+  flex: 1;
+}
+.team-imgs img{
+  width: 100%;
+}
+.team-content h2{
+  font-size: var(--header-font);
+  font-weight: 700;
+}
+.span-1{
+  color: var(--para-clr);
+  font-weight: 400;
+}
+.span-2{
+  color: #ff900e;
+  font-weight: 700;
+}
+
+/* feature section */
+
+.feature-container h2{
+  font-size: var(--header-font);
+  color: var(--header-clr);
+  border-left: #ff900e solid 3px;
+  margin: var(--section-padding);
+} 
+
+
+
+
+
+/* Responsive Media quarries */
+
+/* mobile devices */
+@media screen and (max-width: 576px){
+    :root {
+        --para-font: 2cqw;
+        --heading-font: 3.5cqw;
+        --section-padding: 3cqw 8cqw;
+      }
+      nav,
+      .team-container{
+        flex-direction: column;
+        align-items: center;
+      }
+      .team-imgs{
+        grid-template-columns: 1fr;
+      }
+}
+/* medium devices */
+@media screen and (min-width: 576px) and (max-width: 960px){
+    :root {
+        --para-font: 1.4cqw;
+        --section-padding: 3cqw 8cqw;
+      }
+      nav,
+      .team-container{
+        flex-direction: column;
+        align-items: center;
+      }
 }
